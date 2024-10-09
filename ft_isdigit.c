@@ -1,30 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebervas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 08:10:10 by ebervas           #+#    #+#             */
-/*   Updated: 2024/10/09 08:16:30 by ebervas          ###   ########.fr       */
+/*   Created: 2024/10/07 20:57:32 by ebervas           #+#    #+#             */
+/*   Updated: 2024/10/09 15:12:09 by ebervas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_strchr(char c, char *str)
+int	ft_isdigit(int num)
 {
-	int	i;
-	int	len;
-	
-	i = 0;
-	len = ft_strelen(str);
-	
-	while (i <= len)
-	{
-		if (str[i] == c)
-			return (i);
-		i++;
-	}
-	return (NULL);
+	return (num >= '0' && num <= '9');
 }
