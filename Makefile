@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ebervas <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: eric <eric@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 13:46:46 by ebervas           #+#    #+#              #
-#    Updated: 2024/10/09 16:45:23 by ebervas          ###   ########.fr        #
+#    Updated: 2024/10/09 21:15:13 by eric             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ SRC = ft_isalpha.c\
       ft_strnstr.c\
       ft_atoi.c\
       ft_calloc.c\
-      ft_strdup.c
+      ft_strdup.c\
+      ft_strjoin.c
 
 OBJ = $(SRC:.c=.o)
 
