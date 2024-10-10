@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebervas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: eric <eric@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:23:36 by ebervas           #+#    #+#             */
-/*   Updated: 2024/10/09 16:30:35 by ebervas          ###   ########.fr       */
+/*   Updated: 2024/10/10 16:24:25 by eric             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 
 	if (nmemb == 0 || size == 0)
-		return (malloc(1));
+		return (malloc(0));
 	total_size = nmemb * size;
 	ptr = malloc(total_size);
 	if (ptr == NULL)

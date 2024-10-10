@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebervas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: eric <eric@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:00:06 by ebervas           #+#    #+#             */
-/*   Updated: 2024/10/10 11:00:09 by ebervas          ###   ########.fr       */
+/*   Updated: 2024/10/10 16:22:48 by eric             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,13 @@ char	*ft_create_word(char *str, char c)
 	return (word);
 }
 
+void ft_free_split(char **array, int i)
+{
+	while(i >= 0)
+		free(array[i--]);
+	free(array);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
@@ -66,7 +73,15 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s == c)
 			s++;
 		if (*s)
-			array[i++] = ft_create_word((char *)s, c);
+		{
+			array[i] = ft_create_word((char *)s, c);
+			if(array[i] == NULL)
+			{
+				ft_free_split(array, i);
+				return (NULL);
+			}
+			i++;
+		}
 		while (*s && *s != c)
 			s++;
 	}

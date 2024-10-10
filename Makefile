@@ -6,7 +6,7 @@
 #    By: eric <eric@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 13:46:46 by ebervas           #+#    #+#              #
-#    Updated: 2024/10/10 13:36:57 by ebervas          ###   ########.fr        #
+#    Updated: 2024/10/10 15:20:41 by eric             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,8 @@ SRC = ft_isalpha.c\
       ft_striteri.c\
       ft_putnbr_fd.c\
       ft_strmapi.c\
-      ft_ft_strtrim.c
+      ft_strtrim.c\
+      ft_substr.c
 
 OBJ = $(SRC:.c=.o)
 
