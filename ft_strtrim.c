@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eric <eric@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ebervas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:23:38 by ebervas           #+#    #+#             */
-/*   Updated: 2024/10/10 15:18:55 by eric             ###   ########.fr       */
+/*   Updated: 2024/10/11 08:34:41 by ebervas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isset(char s, char const *set)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (set[i])
@@ -38,18 +38,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (s1[start] && ft_isset(s1[start], set))
 		start++;
-
 	end = ft_strlen(s1) - 1;
 	while (end >= start && ft_isset(s1[end], set))
 		end--;
-
 	len = end - start + 1;
-
-	res = (char *)malloc(sizeof(char) * (len + 1)); 
+	res = (char *)malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);
-
 	ft_strlcpy(res, &s1[start], len + 1);
-
 	return (res);
 }

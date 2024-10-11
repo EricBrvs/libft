@@ -6,7 +6,7 @@
 /*   By: eric <eric@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:00:06 by ebervas           #+#    #+#             */
-/*   Updated: 2024/10/10 16:22:48 by eric             ###   ########.fr       */
+/*   Updated: 2024/10/11 08:56:25 by ebervas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,9 @@ char	*ft_create_word(char *str, char c)
 	return (word);
 }
 
-void ft_free_split(char **array, int i)
+void	ft_free_split(char **array, int i)
 {
-	while(i >= 0)
+	while (i >= 0)
 		free(array[i--]);
 	free(array);
 }
@@ -75,11 +75,8 @@ char	**ft_split(char const *s, char c)
 		if (*s)
 		{
 			array[i] = ft_create_word((char *)s, c);
-			if(array[i] == NULL)
-			{
-				ft_free_split(array, i);
-				return (NULL);
-			}
+			if (array[i] == NULL)
+				return (ft_free_split(array, i), NULL);
 			i++;
 		}
 		while (*s && *s != c)
