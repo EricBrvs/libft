@@ -31,7 +31,7 @@ int					ft_lstsize(t_list *lst);
 int					ft_memcmp(const void *str1, const void *str2, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_memcmp(const void *str1, const void *str2, size_t n);
-int					ft_atoi(char *str);
+int					ft_atoi(const char *str);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_itoa(int n);

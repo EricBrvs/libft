@@ -6,7 +6,7 @@
 /*   By: ebervas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:15:22 by ebervas           #+#    #+#             */
-/*   Updated: 2024/10/10 11:32:12 by ebervas          ###   ########.fr       */
+/*   Updated: 2024/10/11 16:52:33 by ebervas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;
 
+	if (!f || !s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

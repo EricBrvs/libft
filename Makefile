@@ -6,7 +6,7 @@
 #    By: eric <eric@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 13:46:46 by ebervas           #+#    #+#              #
-#    Updated: 2024/10/11 13:15:31 by ebervas          ###   ########.fr        #
+#    Updated: 2024/10/11 16:46:38 by ebervas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,7 @@ bonus : $(NAME) $(OBJB)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJB)
 
 fclean : clean 
 	rm -f $(NAME)

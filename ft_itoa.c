@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-unsigned int	ft_abs(int nbr)
+static unsigned int	ft_abs(int nbr)
 {
 	unsigned int	number;
 
@@ -23,7 +23,7 @@ unsigned int	ft_abs(int nbr)
 	return (number);
 }
 
-char	*ft_reverse(char *str)
+static char	*ft_reverse(char *str)
 {
 	int		i;
 	int		j;

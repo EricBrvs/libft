@@ -6,13 +6,13 @@
 /*   By: eric <eric@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:00:06 by ebervas           #+#    #+#             */
-/*   Updated: 2024/10/11 08:56:25 by ebervas          ###   ########.fr       */
+/*   Updated: 2024/10/11 16:53:58 by ebervas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_word(char *str, char c)
+static int	ft_count_word(char *str, char c)
 {
 	int	i;
 	int	count;
@@ -28,7 +28,7 @@ int	ft_count_word(char *str, char c)
 	return (count);
 }
 
-char	*ft_create_word(char *str, char c)
+static char	*ft_create_word(char *str, char c)
 {
 	char	*word;
 	int		i;
@@ -50,24 +50,18 @@ char	*ft_create_word(char *str, char c)
 	return (word);
 }
 
-void	ft_free_split(char **array, int i)
+static void	ft_free_split(char **array, int i)
 {
 	while (i >= 0)
 		free(array[i--]);
 	free(array);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**return_array(char const *s, char **array, char c)
 {
-	char	**array;
-	int		count;
-	int		i;
+	int	i;
 
 	i = 0;
-	count = ft_count_word((char *)s, c);
-	array = (char **)malloc(sizeof(char *) * (count + 1));
-	if (array == NULL)
-		return (NULL);
 	while (*s)
 	{
 		while (*s && *s == c)
@@ -84,4 +78,18 @@ char	**ft_split(char const *s, char c)
 	}
 	array[i] = NULL;
 	return (array);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**array;
+	int		count;
+
+	if (!s)
+		return (NULL);
+	count = ft_count_word((char *)s, c);
+	array = (char **)malloc(sizeof(char *) * (count + 1));
+	if (array == NULL)
+		return (NULL);
+	return (return_array(s, array, c));
 }

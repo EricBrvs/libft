@@ -6,7 +6,7 @@
 /*   By: eric <eric@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 20:52:10 by eric              #+#    #+#             */
-/*   Updated: 2024/10/10 08:11:41 by ebervas          ###   ########.fr       */
+/*   Updated: 2024/10/11 16:53:40 by ebervas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 	char	*result;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	len_total = ft_strlen(s1) + ft_strlen(s2);
 	result = malloc(sizeof(char) * (len_total + 1));
