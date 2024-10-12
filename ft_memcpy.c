@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ebervas <ebervas@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ebervas <marvin@42>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:21:55 by ebervas           #+#    #+#             */
-/*   Updated: 2024/10/09 17:10:17 by ebervas          ###   ########.fr       */
+/*   Updated: 2024/10/12 09:45:33 by ebervas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

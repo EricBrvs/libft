@@ -6,12 +6,11 @@
 /*   By: ebervas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:45:49 by ebervas           #+#    #+#             */
-/*   Updated: 2024/10/09 16:31:34 by ebervas          ###   ########.fr       */
+/*   Updated: 2024/10/12 09:46:06 by ebervas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {

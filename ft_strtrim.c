@@ -6,13 +6,13 @@
 /*   By: ebervas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:23:38 by ebervas           #+#    #+#             */
-/*   Updated: 2024/10/11 08:34:41 by ebervas          ###   ########.fr       */
+/*   Updated: 2024/10/12 09:01:25 by ebervas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isset(char s, char const *set)
+static int	ft_isset(char s, char const *set)
 {
 	int	i;
 

@@ -6,7 +6,7 @@
 /*   By: ebervas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 08:16:59 by ebervas           #+#    #+#             */
-/*   Updated: 2024/10/09 17:36:56 by ebervas          ###   ########.fr       */
+/*   Updated: 2024/10/12 09:02:49 by ebervas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	*ft_strrchr(const char *str, int c)
 	i = ft_strlen(str);
 	if (c == '\0')
 		return (((char *)str) + i);
-	i = ft_strlen(str);
 	while (i >= 0)
 	{
 		if (str[i] == (char)c)

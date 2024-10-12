@@ -6,7 +6,7 @@
 /*   By: ebervas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 10:20:32 by ebervas           #+#    #+#             */
-/*   Updated: 2024/10/09 17:07:16 by ebervas          ###   ########.fr       */
+/*   Updated: 2024/10/12 09:12:54 by ebervas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (len == 0)
 		return (NULL);
 	len_lit = ft_strlen(little);
-	comp = 1;
 	i = 0;
-	if (little[0] == '\0')
-		return ((char *)big);
 	while (*big && i < len)
 	{
 		if (*big == little[0] && (len_lit + i) <= len)
